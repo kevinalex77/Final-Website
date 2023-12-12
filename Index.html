@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<htaml lang="en">
+    <head>
+        <title>Webpage Design</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="js.js" defer></script>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">TIT TAT</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="Sell.html">Sell/Buy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="Sign_up.html">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type to text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+
+        <br> 
+        <div class="content">
+            <h1>Sustainable Vegetable Trading Hub</h1>
+            <p>
+                Eco-conscious platform revolutionizing the vegetable trade. We connect sellers and buyers passionate about sustainable produce, fostering a community dedicated to supporting environmentally-friendly farming practices. Discover a wide array of fresh, locally-sourced veggies while contributing to a greener planet. Join us in cultivating a healthier future through ethical vegetable trading!
+            </p>
+            
+        </div>
+
+        <br><br>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img class="slideshow-img" src="gallery/1.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 7</div>
+                <img class="slideshow-img" src="gallery/2.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img class="slideshow-img" src="gallery/3.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img class="slideshow-img" src="gallery/4.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img class="slideshow-img" src="gallery/5.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img class="slideshow-img" src="gallery/6.jpeg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img class="slideshow-img" src="gallery/7.jpeg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+
+    </article>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+    </body>
+</htaml>

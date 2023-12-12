@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sign up/Sign in</title>
+  <link rel="stylesheet" href="sing_up.css">
+  <script src="https://kit.fontawesome.com/1af11791fa.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">TIT TAT</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="Sell.html">Sell/Buy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="Sign_up.html">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type to text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+
+        <br>
+
+  <div class="container">
+    <div class="form-box">
+      <h1 id="title">Sign Up</h1>
+      <form>
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            <input type="email" placeholder="Email">
+          </div>
+
+          <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            <input type="password" placeholder="Password">
+          </div>
+          <p>Lost password <a href="#">Click Here!</a></p>
+        </div>
+        <div class="btn-field">
+          <button type="button" id="signupBtn">Sign up</button>
+          <button type="button" id="signinBtn" class="disable">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    let signupBTN = document.getElementById("signupBtn")
+    let signinBTN = document.getElementById("signinBtn")
+    let nameField = document.getElementById("nameField")
+    let title = document.getElementById("title")
+
+
+    signinBtn.onclick = function () {
+      nameField.style.maxHeight = "0";
+      title.innerHTML = "Sign In";
+      signupBTN.classList.add("disable");
+      signinBtn.classList.remove("disable");
+
+    }
+
+
+    signupBtn.onclick = function () {
+      nameField.style.maxHeight = "60px";
+      title.innerHTML = "Sign In";
+      signupBTN.classList.remove("disable");
+      signinBtn.classList.add("disable");
+    }
+  </script>
+</body>
+
+</html>
